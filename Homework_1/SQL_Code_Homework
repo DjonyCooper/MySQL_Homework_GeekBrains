@@ -1,0 +1,20 @@
+# Получаем все данные о содержимом таблицы info в БД mobile_phone
+SELECT * FROM mobile_phone_db.info;
+
+# Получаем данные из столбцов ProductName,Company,Price из таблицы info в БД mobile_phone, где кол-во(ProductCount) превышает 2
+SELECT ProductName,Company,Price FROM mobile_phone_db.info WHERE ProductCount>"2";
+
+# Получаем все данные из таблицы info в БД mobile_phone, где название компании Samsung
+SELECT * FROM mobile_phone_db.info WHERE Company="Samsung";
+
+# Получаем все данные из таблицы info в БД mobile_phone, где в столбце с названием продукта(ProductName) встречается слово iPhone
+SELECT * FROM mobile_phone_db.info WHERE ProductName LIKE "%iPhone%";
+
+# Получаем все данные из таблицы info в БД mobile_phone, где в столбце с названием продукта(ProductName) встречается слово Galaxy
+SELECT * FROM mobile_phone_db.info WHERE ProductName LIKE "%Galaxy%";
+
+# Получаем все данные из таблицы info в БД mobile_phone, где в столбце с названием продукта(ProductName) встречаются цифры в диапазоне от 0 до 9
+SELECT * FROM mobile_phone_db.info WHERE ProductName REGEXP "[0-9]";
+
+# Получаем все данные из таблицы info в БД mobile_phone, где в столбце с названием продукта(ProductName) встречается цифра 8
+SELECT * FROM mobile_phone_db.info WHERE ProductName REGEXP "8";
